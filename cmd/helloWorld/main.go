@@ -9,3 +9,7 @@ func main() {
 func hello() {
 	fmt.Println("Hello, World!")
 }
+
+func blah() bool {
+	return true
+}
