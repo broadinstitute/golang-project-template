@@ -18,8 +18,8 @@ jobs:
     - name: run tests
       run: go test -v -coverprofile=cover.out -covermode=count ./...
     - name: generate coverage file
-      run: go tool cover -html=cover.out -o cover.html && ls -a
+      run: go tool cover -html=cover.out -o cover.html
     - name: show coverage
       uses: pavi2410/html-preview-action@v2
       with:
-        html_file: 'coverage.html'
+        html_file: 'cover.html'
