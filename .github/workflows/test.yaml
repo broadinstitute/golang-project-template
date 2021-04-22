@@ -21,5 +21,5 @@ jobs:
       run: go tool cover -html=cover.out -o cover.html
     - name: show coverage
       uses: pavi2410/html-preview-action@v2
-        with:
+      with:
         html_file: 'coverage.html'
