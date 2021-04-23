@@ -26,3 +26,14 @@ jobs:
         publish_dir: ./public
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
+    - name: Provide link to coverage
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: `[Code Coverage report](https://${{ github.repository_owner }}.github.io/${context.repo.repo})`
+          })
