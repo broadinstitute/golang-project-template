@@ -10,6 +10,6 @@ The basic structure provided in this repo is intended to serve as a starting poi
 
 ## Additional Steps
 
-1. To ensure the code coverage functionality is working, make sure github pages in the project repo.
+1. To ensure the code coverage functionality is working, make sure github pages is enabled in the project repo.
 
 2. To take advantage of the cloudbuild image build process, a [cloud build trigger](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers) must be created to monitor the project repository.
