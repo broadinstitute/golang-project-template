@@ -12,7 +12,11 @@ The basic structure provided in this repo is intended to serve as a starting poi
 
 Click the `use this template` button in the top right to create a new repo with the desired owner and name using the files and folder structure defined here. Make sure to check the `include all branches` option in order to include the `gh-pages` branch so that code coverage html reports work properly.
 
-Most of the CI/CD worflows included here are intended to be generic. The one caveat is [this line in the dockerfile](https://github.com/broadinstitute/golang-project-template/blob/142d0dc810fa4f3afa68e0a5d37aac03f0c3796f/Dockerfile#L13) which will need to be updated to match the actual name of any executable(s).
+Most of the CI/CD worflows included here are intended to be generic with two exceptions.
+
+1. [this line in the dockerfile](https://github.com/broadinstitute/golang-project-template/blob/142d0dc810fa4f3afa68e0a5d37aac03f0c3796f/Dockerfile#L13) which will need to be updated to match the actual name of any executable(s).
+
+2. [this line in the cloudbuild.yaml](https://github.com/broadinstitute/golang-project-template/blob/52f72e50a023a91479fd83605326fec7e69188ec/cloudbuild.yaml#L24) will need to be updated with the desired name for the docker image.
 
 ## Additional Steps
 
