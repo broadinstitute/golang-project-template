@@ -34,7 +34,7 @@ jobs:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
     - name: Provide link to coverage
-      if: github.event_name == 'push'
+      if: github.event_name == 'pull_request'
       uses: actions/github-script@v4
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
