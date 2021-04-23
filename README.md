@@ -8,8 +8,14 @@ with some additional ci/cd setup added in. Some of the patterns defined in that 
 
 The basic structure provided in this repo is intended to serve as a starting point when starting a new go project and to avoid boilerplate.
 
+## Usage
+
+Click the `use this template` button in the top right to create a new repo with the desired owner and name using the files and folder structure defined here. Make sure to check the `include all branches` option in order to include the `gh-pages` branch so that code coverage html reports work properly.
+
+Most of the CI/CD worflows included here are intended to be generic. The one caveat is [this line in the dockerfile](https://github.com/broadinstitute/golang-project-template/blob/142d0dc810fa4f3afa68e0a5d37aac03f0c3796f/Dockerfile#L13) which will need to be updated to match the actual name of any executable(s).
+
 ## Additional Steps
 
 1. To ensure the code coverage functionality is working, make sure github pages is enabled in the project repo.
 
-2. To take advantage of the cloudbuild image build process, a [cloud build trigger](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers) must be created to monitor the project repository.
+2. To take advantage of the cloudbuild image build process, a [cloud build trigger](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers) must be created to monitor the project repository and the cloud build github app must be enabled.
