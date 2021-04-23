@@ -10,3 +10,8 @@ func TestMultBy3(t *testing.T) {
 		t.Errorf("Expecting: %v, got: %v", want, got)
 	}
 }
+
+func TestPrintTriple(t *testing.T) {
+	// this is where some additional test would go
+	PrintTriple(3)
+}
