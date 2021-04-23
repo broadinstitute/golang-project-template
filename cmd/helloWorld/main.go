@@ -11,6 +11,7 @@ func main() {
 	util.PrintTriple(3)
 }
 
+// demo function
 func hello() string {
 	return "Hello, World!"
 }
