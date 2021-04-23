@@ -4,7 +4,7 @@
 A Repo containing a standard layout and configuration for golang projects.
 
 The project layout defined in this repo is a simplified version of [https://github.com/golang-standards/project-layout](https://github.com/golang-standards/project-layout)
-with some additional ci/cd setup added in. Some of the patterns defined in that example are overkill for devop's current needs, however this can easily be updated if needs change.
+with some additional ci/cd setup added in. Some of the patterns defined in that example are overkill for dsp-devops' current needs, however this can easily be updated if needs change.
 
 The basic structure provided in this repo is intended to serve as a starting point when starting a new go project and to avoid boilerplate.
 
