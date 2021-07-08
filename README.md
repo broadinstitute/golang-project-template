@@ -18,3 +18,7 @@ Most of the CI/CD worflows included here are intended to be generic with two exc
 
 ## Additional Steps
 
+1. After creating a new repo from the template. Github secrets referenced in the ci/cd jobs need to be created. This can be done automatically using terraform.
+   [Instructions here](ttps://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y_LmHQkLYyISYns/edit?usp=sharing). [Example for ci in this repo](https://github.com/broadinstitute/terraform-ap-deployments/blob/master/github/tfvars/broadinstitute-golang-project-template.tfvars)
+
+2. Create an a new image repository in `dsp-artifact-registry` for the ci/cd pipeline to push images to. This can also be done automatically via terraform. [Here is the example for this repo](https://github.com/broadinstitute/terraform-ap-deployments/blob/91715091d935e5f0727d108b371322e8dce19094/dsp-artifact-registry/tfvars/dsp-artifact-registry.tfvars#L11). A similar entry for the new repo just needs to be added to that file
