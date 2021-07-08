@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/broadinstitute/golang-project-template/pkg/util"
+	"github.com/broadinstitute/golang-project-template/internal/util"
 )
 
 func main() {
