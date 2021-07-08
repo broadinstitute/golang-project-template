@@ -16,10 +16,9 @@ Most of the CI/CD worflows included here are intended to be generic with two exc
 
 1. [this line in the dockerfile](https://github.com/broadinstitute/golang-project-template/blob/142d0dc810fa4f3afa68e0a5d37aac03f0c3796f/Dockerfile#L13) which will need to be updated to match the actual name of any executable(s).
 
-2. [this line in the cloudbuild.yaml](https://github.com/broadinstitute/golang-project-template/blob/52f72e50a023a91479fd83605326fec7e69188ec/cloudbuild.yaml#L24) will need to be updated with the desired name for the docker image.
-
 ## Additional Steps
 
-1. To ensure the code coverage functionality is working, make sure github pages is enabled in the project repo.
+1. After creating a new repo from the template. Github secrets referenced in the ci/cd jobs need to be created. This can be done automatically using terraform.
+   [Instructions here](ttps://docs.google.com/document/d/1JbjV4xjAlSOuZY-2bInatl4av3M-y_LmHQkLYyISYns/edit?usp=sharing). [Example for ci in this repo](https://github.com/broadinstitute/terraform-ap-deployments/blob/master/github/tfvars/broadinstitute-golang-project-template.tfvars)
 
-2. To take advantage of the cloudbuild image build process, a [cloud build trigger](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers) must be created to monitor the project repository and the cloud build github app must be enabled.
+2. Create an a new image repository in `dsp-artifact-registry` for the ci/cd pipeline to push images to. This can also be done automatically via terraform. [Here is the example for this repo](https://github.com/broadinstitute/terraform-ap-deployments/blob/91715091d935e5f0727d108b371322e8dce19094/dsp-artifact-registry/tfvars/dsp-artifact-registry.tfvars#L11). A similar entry for the new repo just needs to be added to that file

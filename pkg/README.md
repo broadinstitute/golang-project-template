@@ -1,5 +1,6 @@
 # `/pkg`
 
-Library code that's ok to use by external applications (e.g., `/pkg/mypubliclib`). Other projects will import these libraries expecting them to work.
+This directory contains packages that are public and can be imported by other go projects. It is usually used for shared library
+code intended to be importable from other go modules.
 
-It's also a way to group Go code in one place when your root directory contains lots of non-Go components and directories making it easier to run various Go tools.
+Usage of this directory is optional depending on needs of the project namely doesn't it include importable packages relevant outside of a particular project. There are varying standards on how to organize `go get`able packages, however go projects generally tend to favor shallow and wide directory layouts.
