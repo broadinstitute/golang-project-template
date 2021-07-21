@@ -9,3 +9,8 @@ func TestHello(t *testing.T) {
 		t.Errorf("Expected: %q, got: %q", want, got)
 	}
 }
+
+func TestDoSomething(t *testing.T) {
+	// adding a do nothing test for demonstration purposes
+	doSomething()
+}

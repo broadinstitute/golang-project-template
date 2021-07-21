@@ -15,3 +15,7 @@ func main() {
 func hello() string {
 	return "Hello, World!"
 }
+
+func doSomething() {
+	// this is a do nothing function added purely for demonstration
+}
